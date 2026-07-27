@@ -24,4 +24,4 @@
 
 ### GitHub Stats
 
-![Tharun's GitHub Stats](https://github-readme-stats.vercel.ai/api?username=tharun-37&show_icons=true&theme=transparent&hide_border=true)
+![Tharun's GitHub Stats](https://github-readme-stats.vercel.ai/api?username=tharun-37&show_icons=true)
