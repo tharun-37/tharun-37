@@ -50,15 +50,15 @@
 <h2 align="center">GitHub Activity</h2>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=tharun-37&show_icons=true&theme=radical&count_private=true" alt="GitHub stats" width="48%" />
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=tharun-37&show_icons=true&theme=radical&count_private=true" alt="GitHub stats" width="48%" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=tharun-37&theme=radical" alt="GitHub streak" width="48%" />
 </p>
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=tharun-37&theme=radical&no-frame=true&row=1&column=7" alt="Trophies" width="100%" />
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=tharun-37&layout=compact&theme=radical" alt="Top languages" width="48%" />
 </p>
 
 ---
 
 <h2 align="center">Socials</h2>
 
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/tharun.skeptical) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/tharun37) [![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?logo=Reddit&logoColor=white)](https://reddit.com/user/mynicknameis37) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:tharunritz37@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/tharun37) [![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?logo=Reddit&logoColor=white)](https://reddit.com/user/mynicknameis37) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:tharunritz37@gmail.com)
