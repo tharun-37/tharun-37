@@ -11,7 +11,7 @@
 
 ---
 
-<h2 align="center">Open Source</h2>
+<h2 align="center">Open Source Contributions</h2>
 
 [![career-ops](https://img.shields.io/badge/career--ops--hq/career--ops-contributor-00b4d8?logo=github)](https://github.com/career-ops-hq/career-ops)
 [![merged PRs](https://img.shields.io/badge/merged%20PRs-5-2ea44f?logo=pullrequest)](https://github.com/career-ops-hq/career-ops/pulls?q=is%3Apr+author%3Atharun-37+is%3Amerged)
