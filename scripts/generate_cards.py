@@ -171,14 +171,13 @@ def contributions(u):
         if not r: continue
         a = agg.setdefault(r["nameWithOwner"], {"n": 0, "lang": (r.get("primaryLanguage") or {}).get("name", "")})
         a["n"] += 1
-    rows = sorted(agg.items(), key=lambda kv: -kv[1]["n"])
-    for name in sorted(forked - set(agg) - {None}):          # forked but nothing merged yet
-        rows.append((name, {"n": 0, "lang": ""}))
-    return rows[:5], u["merged"]["issueCount"], len(agg), forked
+    # Only keep repos that are forked AND have at least 1 merged PR
+    rows = [(name, a) for name, a in sorted(agg.items(), key=lambda kv: -kv[1]["n"]) if name in forked and a["n"] > 0]
+    return rows[:5], u["merged"]["issueCount"], len(rows), forked
 
 def card_contrib(u):
     rows, total, nrepos, forked = contributions(u)
-    b = label(28, 44, "Open source") + t(402, 44, f"{total} merged \u00b7 {nrepos} repos", 12, "#a5b4fc", 700, True, "end")
+    b = label(28, 44, "Open source projects") + t(402, 44, f"{total} merged \u00b7 {nrepos} repos", 12, "#a5b4fc", 700, True, "end")
     if not rows:
         b += t(28, 110, "No merged pull requests yet", 15, "#f5f3ff", 700)
     for i, (name, a) in enumerate(rows):
