@@ -32,8 +32,12 @@ def gql():
         data=json.dumps({"query": QUERY, "variables": {"login": USER, "q": f"author:{USER} is:pr is:merged -user:{USER}"}}).encode(),
         headers={"Authorization": f"bearer {TOKEN}", "Content-Type": "application/json", "User-Agent": "profile-cards"})
     d = json.load(urllib.request.urlopen(req, timeout=30))
-    if "errors" in d: raise SystemExit(d["errors"])
-    u = d["data"]["user"]; u["merged"] = d["data"]["search"]
+    if "errors" in d: 
+        print("GraphQL errors:", json.dumps(d["errors"], indent=2))
+        raise SystemExit(d["errors"])
+    u = d["data"]["user"]
+    u["merged"] = d["data"]["search"]
+    print(f"Fetched user: {u.get('login')}, repos: {u.get('repositories', {}).get('totalCount')}, forks: {len(u.get('forks', {}).get('nodes', []))}, merged PRs: {u.get('merged', {}).get('issueCount')}")
     return u
 
 def avatar_b64(url):
