@@ -1,7 +1,5 @@
 <p align="center"><a href="https://github.com/tharun-37"><img src="assets/id.svg" alt="Tharun R" width="100%" /></a></p>
 
-<p align="center"><img src="assets/about.svg" alt="About" width="100%" /></p>
-
 <p align="center">
   <img src="assets/repo-1.svg" alt="Project 1" width="49%" />
   <img src="assets/repo-2.svg" alt="Project 2" width="49%" />

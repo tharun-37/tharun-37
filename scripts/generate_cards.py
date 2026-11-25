@@ -142,12 +142,6 @@ def card_id(u, langs, stats, av):
         b += t(x + 20, y + 42, v, 30, "#4ade80" if i % 2 else "#22d3ee", 800) + t(x + 20, y + 66, k.upper(), 11, "#8b8fb3", 500, True, spacing=".12em")
     return frame(880, 460, b.replace('rx="18" fill="#05050c"', 'rx="18" fill="#05050c"'))
 
-def card_about(u, langs, stats, av):
-    b = label(36, 52, "Collector card") + t(36, 104, u["name"] or u["login"], 30, "#f5f3ff", 800)
-    b += t(36, 140, u["bio"] or ((langs[0][0] + " developer") if langs else "Developer"), 15, "#f5f3ff", opacity=".8")
-    b += t(36, 186, f'{u["followers"]["totalCount"]} followers \u00b7 {u["repositories"]["totalCount"]} repositories \u00b7 \u2605 {stats["stars"]} stars', 12, "#a5b4fc", mono=True)
-    b += '<circle cx="782" cy="115" r="66" fill="#22d3ee"/><clipPath id="c2"><circle cx="782" cy="115" r="62"/></clipPath>' + avatar_img(av, 720, 53, 124, 124, "c2")
-    return frame(880, 230, b)
 
 def card_repo(i, r):
     lang = (r.get("primaryLanguage") or {}).get("name", "")
@@ -217,7 +211,7 @@ def main():
     pinned = u["pinnedItems"]["nodes"]
     repos = (pinned + [r for r in u["repositories"]["nodes"] if r["name"] not in {p["name"] for p in pinned}])[:4]
     os.makedirs(OUT, exist_ok=True)
-    files = {"id.svg": card_id(u, langs, stats, av), "about.svg": card_about(u, langs, stats, av),
+    files = {"id.svg": card_id(u, langs, stats, av),
              "stack.svg": card_stack(langs), "contrib.svg": card_contrib(u), "log.svg": card_log(days, stats)}
     for i, r in enumerate(repos, 1): files[f"repo-{i}.svg"] = card_repo(i, r)
     for n, s in files.items():
